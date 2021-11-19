@@ -35,6 +35,10 @@ if (age <= 17) {
     let text = document.getElementById('my_id').innerHTML = `Il prezzo finale del biglietto per gli under 18 è ${(sum - discountUnder18).toFixed(2)}€`;
 } else if (age >= 66) {
     let text = document.getElementById('my_id').innerHTML = `Il prezzo finale del biglietto per gli over 65 è ${(sum - discountOver65).toFixed(2)}€`;
+} else if (khilometers == 0) {
+    let text = document.getElementById('my_id').innerHTML = `Nessun viaggio in programma per oggi!`;
+} else if (isNaN(khilometers) && isNaN(age)) {
+    let text = document.getElementById('my_id').innerHTML = `Inserire dati prego`;
 } else {
     let text = document.getElementById('my_id').innerHTML = `Il prezzo finale del biglietto è ${(sum).toFixed(2)}€`;
 }
