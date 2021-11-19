@@ -23,10 +23,18 @@ const discountUnder18 = sum * 20 / 100;
 
 const discountOver65 = sum * 40 / 100;
 
-if (age <= 17) {
+/* if (age <= 17) {
    console.log('Il prezzo finale del biglietto per gli under 18 è ' + (sum - discountUnder18).toFixed(2) + '€');
 } else if (age >= 66) {
     console.log('Il prezzo finale del biglietto per gli over 65 è ' + (sum - discountOver65).toFixed(2) + '€');
 } else {
     console.log('Il prezzo finale del biglietto è ' + sum.toFixed(2) + '€');
+} */
+
+if (age <= 17) {
+    let text = document.getElementById('my_id').innerHTML = `Il prezzo finale del biglietto per gli under 18 è ${(sum - discountUnder18).toFixed(2)}€`;
+} else if (age >= 66) {
+    let text = document.getElementById('my_id').innerHTML = `Il prezzo finale del biglietto per gli over 65 è ${(sum - discountOver65).toFixed(2)}€`;
+} else {
+    let text = document.getElementById('my_id').innerHTML = `Il prezzo finale del biglietto è ${(sum).toFixed(2)}€`;
 }
